@@ -28,6 +28,18 @@ These macros require [klipper](https://github.com/KevinOConnor/klipper).
 Also they are written for [VORON](http://vorondesign.com/) printers.
 Technically the macros should work on any printer that homes to X/Y max and Z0.
 
+## Disclaimer
+
+> **Use at your own risk**
+
+VORONklippper is provided as is. It is actively used and did not cause any 
+issues so far. Despite that I am not responsible for any damage to your printer 
+or your person inflicted while using the configurations or macros included.
+
+Always make sure that the macros work with your machine and that all 
+prerequisites are met to operate your printer safely (construction, firmware, 
+calibration, ...).
+
 ## Installation
 
 1. SSH into your PI
