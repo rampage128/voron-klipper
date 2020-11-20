@@ -55,6 +55,26 @@ calibration, ...).
 
 ## Usage
 
+To make use of VORONklipper you need to configure some parameters first.
+In order to do so you have to add one gcode macro to your `printer.cfg`
+
+```
+[gcode_macro VORON_CONFIG]
+variable_brush_active: false
+variable_brush_x: 100
+variable_brush_y: 350
+variable_brush_z: 3
+variable_brush_width: 50
+variable_brush_orientation: x
+variable_brush_strokes: 5
+gcode:
+```
+
+Unfortunately klipper does not allow to create custom config sections/values. 
+Adding this macro to your `printer.cfg` serves as a work-around to enable 
+configuration of `VORONklipper` without having to edit the individual macro 
+files directly.
+
 VORONklipper provides macros for you to call from octoprint/mainsail or what 
 ever UI you use. Usage of the individual macros can be found under the 
 [Commands](#commands) section below.
