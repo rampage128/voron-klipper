@@ -26,6 +26,8 @@ Z-offset during `print_start`. You can still force homing X/Y with a
 > To make it work you have to remove your own `homing_override` from 
 `printer.cfg`.
 
+> This override needs [configuration](configuration.md#endstop)!
+
 ## __print end__
 ```
 PRINT_END
@@ -61,6 +63,8 @@ next step. It is highly recommended, that you use the built in
 X/Y after every step. Especially after cleaning the nozzle this is important, 
 because new plastic could ooze out of the nozzle and throw off the offset.
 
-> _Please note:_ If you do not provide a profile, no bed mesh will be used.
+> _Please note:_ 
+> - If you do not provide a profile, no bed mesh will be used.
+> - Using `CLEAN=true` needs [configuration](configuration.md#nozzle_cleaning)!
 
 > To make it work you have to remove your own gcode macro `print_start` from `printer.cfg`.

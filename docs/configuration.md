@@ -50,7 +50,7 @@ your `printer.cfg` and instead use the one provided by `VORONklipper`:
 - `variable_z_endstop_x`: The X position of your Z-endstop pin.
 - `variable_z_endstop_y`: The Y position of your Z-endstop pin.
 
-### Nozzle cleaning brush
+### Nozzle cleaning
 `VORONklipper` includes a cleaning script for your nozzle. You can specify 
 the location, size and orientation of your nozzle as well as the number of 
 strokes to clean with.

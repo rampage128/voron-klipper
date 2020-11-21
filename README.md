@@ -69,16 +69,16 @@ If you did not change the macro files, you can safely
 
 To make use of `VORONklipper` you need to configure some parameters first.
 In order to do so you have to add one small gcode macro to your `printer.cfg`. 
-Please read the [configuration document](https://github.com/rampage128/voron-klipper/blob/main/docs/configuration.md) 
+Please read the [configuration document](docs/configuration.md) 
 on how to do that and then continue with this page.
 
 `VORONklipper` provides macros for you to call from octoprint/mainsail or what 
 ever UI you use. Usage of the individual macros can be found in the 
-[commands document](https://github.com/rampage128/voron-klipper/blob/main/docs/commands.md).
+[commands document](docs/commands.md).
 
 Additionally you can make use of the built in `print_start` and `print_end` 
 macros as well as the `homing_override`. In order to do so please consult the 
-[overrides document](https://github.com/rampage128/voron-klipper/blob/main/docs/overrides.md).
+[overrides document](docs/overrides.md).
 
 ## Contribute
 

@@ -14,12 +14,12 @@ CLEAN_NOZZLE
 ```
 Will perform a cleaning routine with the nozzle on a brush. The position and 
 orientation of the brush as well as the amount of cleaning strokes are defined 
-in the [VORONklipper configuration](https://github.com/rampage128/voron-klipper/blob/main/docs/configuration.md).
+in the [VORONklipper configuration](configuration.md#nozzle_cleaning).
 
 > _Please note:_ 
 > - This command will automatically perform a homing routine if 
 >   the printer is currently not homed yet.
-> - The brush has to be enabled in the [configuration](https://github.com/rampage128/voron-klipper/blob/main/docs/configuration.md).
+> - The brush has to be enabled in the [configuration](configuration.md#nozzle_cleaning).
 
 ### __heat__
 ```
@@ -99,9 +99,9 @@ Will center the toolhead on X and Y.
 ```
 CHECK_VORON_CONFIG
 ```
-This macro will raise an exception and link to the configuration document if 
-the configuration macro is not present. It is used in other macros that require 
-the configuration to be present.
+This macro will raise an error and link to the [configuration document](configuration.md) 
+if the configuration macro is not present. It is used in other macros to 
+prevent further execution of gcode if the required configuration is missing.
 
 ### __clear display__
 ```
