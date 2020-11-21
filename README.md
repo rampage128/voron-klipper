@@ -82,5 +82,5 @@ macros as well as the `homing_override`. In order to do so please consult the
 
 ## Contribute
 
-Feel free to [open an issue](https://github.com/rampage128/voron_klipper/issues) 
+Feel free to [open an issue](https://github.com/rampage128/voron-klipper/issues) 
 or submit a PR
