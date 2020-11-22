@@ -28,6 +28,16 @@ Z-offset during `print_start`. You can still force homing X/Y with a
 
 > This override needs [configuration](configuration.md#endstop)!
 
+## __print cancel__
+```
+PRINT_CANCEL
+```
+Just clears bed mesh and parks the toolhead at the back of the printer. Useful 
+as gcode for the Octoprint cancel print feature.
+
+> Please note: This macro will not retract your filament. This is done to 
+prevent an error if the extrusion temperature is below klippers limit. 
+
 ## __print end__
 ```
 PRINT_END
@@ -40,13 +50,13 @@ of the printer.
 
 ## __print start__
 ```
-PRINT_START EXTRUDER=<extruder temperature> [BED=<bed temperature>] [PROFILE=<profile name>] [CLEAN=true]
+PRINT_START EXTRUDER=<extruder temperature> [BED=<bed temperature>] [PROFILE=<profile name>] [CHAMBER=<chamber temperature>] [CLEAN=true]
 ```
 Macro to automate print starts for different profiles. You can call this from 
 your slicer as start gcode. 
 
 It will 
-1. heat up the bed/extruder to the desired temperatures
+1. heat up the bed/extruder/chamber to the desired temperatures
 2. perform QGL 
 3. perform nozzle cleaning if `CLEAN=true` is specified
 4. load the bed mesh for the given profile name if `PROFILE` parameter is 
@@ -66,5 +76,7 @@ because new plastic could ooze out of the nozzle and throw off the offset.
 > _Please note:_ 
 > - If you do not provide a profile, no bed mesh will be used.
 > - Using `CLEAN=true` needs [configuration](configuration.md#nozzle_cleaning)!
+> - You have to define a `M141` gcode override for the `CHAMBER` parameter to 
+>   work.
 
 > To make it work you have to remove your own gcode macro `print_start` from `printer.cfg`.

@@ -23,11 +23,17 @@ in the [VORONklipper configuration](configuration.md#nozzle_cleaning).
 
 ### __heat__
 ```
-HEAT EXTRUDER=<extruder temperature> [BED=<bed temperature>] [BLOCK=<true|false>]
+HEAT [EXTRUDER=<extruder temperature>] [BED=<bed temperature>] [CHAMBER=<chamber temperature>] [BLOCK=<true|false>]
 ```
-Will heat up the Extruder (and bed if a bed temperature is specified). By default 
-this command will block the printer until the temperature is reached 
-(M109/M190). You can specify `BLOCK=false` to avoid that.
+Will heat up the extruder/bed/chamber if the corresponding parameter is 
+specified. By default this command will block the printer until the temperature 
+is reached (M109/M190). You can specify `BLOCK=false` to avoid that.
+
+> Please note:
+> - You have to define a `M141` gcode override for the `CHAMBER` parameter to 
+>   work.
+> - The chamber command will never block since that is impractical with a 
+>   passively heated chamber (temperature controlled by an exhaust fan only).
 
 ### __home__
 ```
