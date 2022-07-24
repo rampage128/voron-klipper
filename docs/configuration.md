@@ -26,6 +26,9 @@ This approach has some advantages:
 variable_z_endstop_x: 231
 variable_z_endstop_y: 347
 
+variable_motion_low_z: 5
+variable_motion_speed: 100
+
 variable_brush_active: "true"
 variable_brush_x: 100
 variable_brush_y: 350
@@ -49,6 +52,13 @@ Instead of editing a `homing_override` section yourself, you can remove it from
 your `printer.cfg` and instead use the one provided by `VORONklipper`:
 - `variable_z_endstop_x`: The X position of your Z-endstop pin.
 - `variable_z_endstop_y`: The Y position of your Z-endstop pin.
+
+### Motion
+The included macros include travel moves which can uniformly be configured with 
+the motion variables:
+- `variable_motion_low_z`: The Z-clearance above bed to perform low level 
+   travel moves.
+- `variable_motion_speed`: The general motion speed in mm/s of all travel moves.
 
 ### Nozzle cleaning
 `VORONklipper` includes a cleaning script for your nozzle. You can specify 
